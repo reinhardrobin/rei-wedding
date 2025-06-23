@@ -93,8 +93,15 @@ function App() {
   useEffect(() => {
     try {
       const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-      const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
-
+      const firebaseConfig = {
+        apiKey: "AIzaSyA0TdzvChWikIMqnM6X_H2hlclOmOHa7Lg",
+        authDomain: "perencana-pernikahan-r31.firebaseapp.com",
+        projectId: "perencana-pernikahan-r31",
+        storageBucket: "perencana-pernikahan-r31.firebasestorage.app",
+        messagingSenderId: "90625221103",
+        appId: "1:90625221103:web:f7fcb93d7561e7f8a2d61a",
+      };
+      
       if (!firebaseConfig) {
         setError("Firebase config not available. Cannot connect to database.");
         setLoading(false);
